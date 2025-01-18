@@ -20,7 +20,7 @@ postgres:17.2-alpine
 rabbitmq:4.1-rc-management-alpine
 qxip/qryn:3.2.37
 qxip/qryn:3.2.37-bun
-clickhouse/clickhouse-server:24.8.11.5-alpine3
+clickhouse/clickhouse-server:24.8.11.5-alpine
 clickhouse/clickhouse-server:24.1.2-alpine
 gliderlabs/logspout:v3.2.14
 bitnami/zookeeper:3.7.1
