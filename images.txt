@@ -8,7 +8,7 @@
 node:22.14.0-bookworm-slim
 
 #portainer/portainer-ce:2.25.1-alpine
-portainer/portainer-ce2.27.3-alpine
+portainer/portainer-ce:2.27.3-alpine
 
 #nginx:1.27.3-alpine
 nginx:1.27.4-bookworm-perl
