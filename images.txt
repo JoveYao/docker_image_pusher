@@ -8,19 +8,22 @@
 node:22.14.0-bookworm-slim
 
 #portainer/portainer-ce:2.25.1-alpine
-portainer/portainer-ce:2.27.3-alpine
+#portainer/portainer-ce:2.27.3-alpine
 
 #nginx:1.27.3-alpine
-nginx:1.27.4-bookworm-perl
+#nginx:1.27.4-bookworm-perl
 
 #redis:7.4.2-alpine
-redis:7.4.2-bookworm
+#redis:7.4.2-bookworm
 
 #postgres:17.2-alpine
-postgres:17.4-bookworm
+#postgres:17.4-bookworm
 
 #rabbitmq:4.1-rc-management-alpine
-rabbitmq:4.1-rc-management
+#rabbitmq:4.1-rc-management
+
+#timescale/timescaledb-ha:pg16.3-ts2.15.3-all
+timescale/timescaledb-ha:pg17.4-ts2.19.0
 
 #qxip/qryn:3.2.37
 #qxip/qryn:3.2.37-bun
