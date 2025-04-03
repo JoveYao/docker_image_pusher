@@ -21,8 +21,8 @@
 #postgres:17.4-bookworm
 
 #rabbitmq:4.0.2-management
+#rabbitmq:4.0.7-management
 #rabbitmq:4.0.8-management
-rabbitmq:4.0.8-management
 #rabbitmq:4.1.0-rc.1-management
 
 #timescale/timescaledb-ha:pg16.3-ts2.15.3-all
