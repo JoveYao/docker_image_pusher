@@ -5,7 +5,7 @@
 # *1.发行版选择：大多数镜像不指定默认都是bookworm. 最小选alpine;较小选slim(debian);安全选bookworm(=debian12或最新稳定版);稳定选bullseye(即debian11或次新稳定版)
 
 #node:20.2.0-alpine3.16
-node:22.14.0-bullseye-slim
+#node:22.14.0-bullseye-slim
 #node:22.14.0-bookworm-slim
 
 #portainer/portainer-ce:2.25.1-alpine
@@ -20,8 +20,9 @@ node:22.14.0-bullseye-slim
 #postgres:17.2-alpine
 #postgres:17.4-bookworm
 
-#rabbitmq:4.1-rc-management-alpine
-#rabbitmq:4.1-rc-management
+rabbitmq:4.0.2-management
+rabbitmq:4.0.7-management
+rabbitmq:4.1.0-rc.1-managementt
 
 #timescale/timescaledb-ha:pg16.3-ts2.15.3-all
 #timescale/timescaledb-ha:pg17.4-ts2.19.0
