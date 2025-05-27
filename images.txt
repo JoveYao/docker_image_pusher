@@ -7,7 +7,7 @@
 registry:2.8.3
 
 # bitnami-harbor
-bitnamicharts/harbor:26.3.0
+# bitnamicharts/harbor:26.3.0
 bitnami/os-shell:12-debian-12
 bitnami/nginx:1.28.0-debian-12
 bitnami/harbor-portal:2.13.1-debian-12
@@ -19,14 +19,14 @@ bitnami/harbor-adapter-trivy:2.13.1-debian-12
 bitnami/harbor-exporter:2.13.1-debian-12
 
 # bitnami-postgresql
-bitnamicharts/postgresql-ha:16.0.7
+# bitnamicharts/postgresql-ha:16.0.7
 bitnami/os-shell:12-debian-12
 bitnami/postgresql-repmgr:17.5.0-debian-12
 bitnami/pgpool:4.6.1-debian-12
 bitnami/postgres-exporter:0.17.1-debian-12
 
 # bitnami-redis
-bitnamicharts/redis:21.1.7
+# bitnamicharts/redis:21.1.7
 bitnami/os-shell:12-debian-12
 bitnami/kubectl:1.33.1-debian-12
 bitnami/redis:8.0.1-debian-12
@@ -34,7 +34,7 @@ bitnami/redis-sentinel:8.0.1-debian-12
 bitnami/redis-exporter:1.73.0-debian-12
 
 # bitnami-rabbitmq
-bitnamicharts/rabbitmq:16.0.3
+# bitnamicharts/rabbitmq:16.0.3
 bitnami/rabbitmq:4.1.0-debian-12
 bitnami/os-shell:12-debian-12
 
