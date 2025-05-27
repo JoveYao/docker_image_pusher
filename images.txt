@@ -4,7 +4,41 @@
 # 4.支持镜像架构. --platform=xxxxx 参数指定镜像架构
 # *1.发行版选择：大多数镜像不指定默认都是bookworm. 最小选alpine;较小选slim(debian);安全选bookworm(=debian12或最新稳定版);稳定选bullseye(即debian11或次新稳定版)
 
-node:16.18.0-alpine3.16
+registry:2.8.3
+
+# bitnami-harbor
+bitnamicharts/harbor:26.3.0
+bitnami/os-shell:12-debian-12
+bitnami/nginx:1.28.0-debian-12
+bitnami/harbor-portal:2.13.1-debian-12
+bitnami/harbor-core:2.13.1-debian-12
+bitnami/harbor-jobservice:2.13.1-debian-12
+bitnami/harbor-registry:2.13.1-debian-12
+bitnami/harbor-registryctl:2.13.1-debian-12
+bitnami/harbor-adapter-trivy:2.13.1-debian-12
+bitnami/harbor-exporter:2.13.1-debian-12
+
+# bitnami-postgresql
+bitnamicharts/postgresql-ha:16.0.7
+bitnami/os-shell:12-debian-12
+bitnami/postgresql-repmgr:17.5.0-debian-12
+bitnami/pgpool:4.6.1-debian-12
+bitnami/postgres-exporter:0.17.1-debian-12
+
+# bitnami-redis
+bitnamicharts/redis:21.1.7
+bitnami/os-shell:12-debian-12
+bitnami/kubectl:1.33.1-debian-12
+bitnami/redis:8.0.1-debian-12
+bitnami/redis-sentinel:8.0.1-debian-12
+bitnami/redis-exporter:1.73.0-debian-12
+
+# bitnami-rabbitmq
+bitnamicharts/rabbitmq:16.0.3
+bitnami/rabbitmq:4.1.0-debian-12
+bitnami/os-shell:12-debian-12
+
+#node:16.18.0-alpine3.16
 #node:20.2.0-alpine3.16
 #node:22.14.0-bullseye-slim
 #node:22.14.0-bookworm-slim
@@ -23,7 +57,7 @@ node:16.18.0-alpine3.16
 
 #rabbitmq:4.0.2-management
 #rabbitmq:4.0.7-management
-rabbitmq:4.0.8-management
+#rabbitmq:4.0.8-management
 #rabbitmq:4.1.0-rc.1-management
 
 #timescale/timescaledb-ha:pg16.3-ts2.15.3-all
