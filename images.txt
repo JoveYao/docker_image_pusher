@@ -6,10 +6,9 @@
 
 # registry:2.8.3
 
-# bitnami-harbor
 # bitnamicharts/harbor:26.6.1
 # bitnami/os-shell:12-debian-12-r45
-bitnami/nginx:1.28.0-debian-12-r3
+# bitnami/nginx:1.28.0-debian-12-r3
 # bitnami/harbor-adapter-trivy:2.13.1-debian-12-r0
 # bitnami/harbor-core:2.13.1-debian-12-r1
 # bitnami/harbor-exporter:2.13.1-debian-12-r0
@@ -18,63 +17,79 @@ bitnami/nginx:1.28.0-debian-12-r3
 # bitnami/harbor-registry:2.13.1-debian-12-r0
 # bitnami/harbor-registryctl:2.13.1-debian-12-r0
 
-# bitnami-postgresql-ha
 # bitnamicharts/postgresql-ha:16.0.9
 # bitnami/os-shell:12-debian-12-r45
-bitnami/pgpool:4.6.2-debian-12-r1
-bitnami/postgres-exporter:0.17.1-debian-12-r8
-bitnami/postgresql-repmgr:17.5.0-debian-12-r4
+# bitnami/pgpool:4.6.2-debian-12-r1
+# bitnami/postgres-exporter:0.17.1-debian-12-r8
+# bitnami/postgresql-repmgr:17.5.0-debian-12-r4
 
-# bitnami-redis
 # bitnamicharts/redis:21.1.11
 # bitnami/os-shell:12-debian-12-r45
 # bitnami/kubectl:1.33.1-debian-12-r2
-bitnami/redis:8.0.2-debian-12-r3
-bitnami/redis-sentinel:8.0.2-debian-12-r1
+# bitnami/redis:8.0.2-debian-12-r3
+# bitnami/redis-sentinel:8.0.2-debian-12-r1
 # bitnami/redis-exporter:1.73.0-debian-12-r0
 
-# bitnami-rabbitmq
 # bitnamicharts/rabbitmq:16.0.4
 # bitnami/os-shell:12-debian-12-r45
 # bitnami/rabbitmq:4.1.0-debian-12-r1
 
-#node:16.18.0-alpine3.16
-#node:20.2.0-alpine3.16
-#node:22.14.0-bullseye-slim
-#node:22.14.0-bookworm-slim
+# bitnamicharts/grafana:12.0.4
+bitnami/grafana:12.0.1-debian-12-r1
 
-#portainer/portainer-ce:2.25.1-alpine
-#portainer/portainer-ce:2.27.3-alpine
+# bitnamicharts/grafana-loki:4.8.12
+bitnami/grafana-loki:3.5.1-debian-12-r0
+bitnami/promtail:3.5.1-debian-12-r0
 
-#nginx:1.27.3-alpine
-#nginx:1.27.4-bookworm-perl
+# bitnamicharts/grafana-mimir:2.0.7
+bitnami/grafana-mimir:2.16.0-debian-12-r7
+bitnami/memcached:1.6.38-debian-12-r6
 
-#redis:7.4.2-alpine
-#redis:7.4.2-bookworm
+# bitnamicharts/grafana-operator:4.9.18
+bitnami/grafana-operator:5.18.0-debian-12-r1
 
-#postgres:17.2-alpine
-#postgres:17.4-bookworm
+# bitnamicharts/grafana-tempo:4.0.6
+bitnami/grafana-tempo:2.7.2-debian-12-r5
+bitnami/grafana-tempo-query:2.7.2-debian-12-r7
+bitnami/grafana-tempo-vulture:2.7.2-debian-12-r5
 
-#rabbitmq:4.0.2-management
-#rabbitmq:4.0.7-management
-#rabbitmq:4.0.8-management
-#rabbitmq:4.1.0-rc.1-management
+# node:16.18.0-alpine3.16
+# node:20.2.0-alpine3.16
+# node:22.14.0-bullseye-slim
+# node:22.14.0-bookworm-slim
 
-#timescale/timescaledb-ha:pg16.3-ts2.15.3-all
-#timescale/timescaledb-ha:pg17.4-ts2.19.0
+# portainer/portainer-ce:2.25.1-alpine
+# portainer/portainer-ce:2.27.3-alpine
 
-#qxip/qryn:3.2.37
-#qxip/qryn:3.2.37-bun
-#clickhouse/clickhouse-server:24.8.11.5-alpine
-#clickhouse/clickhouse-server:24.1.2-alpine
-#gliderlabs/logspout:v3.2.14
-#bitnami/zookeeper:3.7.1
-#jaegertracing/example-hotrod:1.65.0
-#jaegertracing/example-hotrod:1.30
-#signoz/alertmanager:0.23.8
-#signoz/alertmanager:0.23.7
-#signoz/query-service:0.67.1
-#signoz/frontend:0.67.1
-#signoz/locust:1.2.3
-#signoz/signoz-schema-migrator:0.111.22
-#signoz/signoz-otel-collector:0.111.22
+# nginx:1.27.3-alpine
+# nginx:1.27.4-bookworm-perl
+
+# redis:7.4.2-alpine
+# redis:7.4.2-bookworm
+
+# postgres:17.2-alpine
+# postgres:17.4-bookworm
+
+# rabbitmq:4.0.2-management
+# rabbitmq:4.0.7-management
+# rabbitmq:4.0.8-management
+# rabbitmq:4.1.0-rc.1-management
+
+# timescale/timescaledb-ha:pg16.3-ts2.15.3-all
+# timescale/timescaledb-ha:pg17.4-ts2.19.0
+
+# qxip/qryn:3.2.37
+# qxip/qryn:3.2.37-bun
+# clickhouse/clickhouse-server:24.8.11.5-alpine
+# clickhouse/clickhouse-server:24.1.2-alpine
+# gliderlabs/logspout:v3.2.14
+# bitnami/zookeeper:3.7.1
+# jaegertracing/example-hotrod:1.65.0
+# jaegertracing/example-hotrod:1.30
+# signoz/alertmanager:0.23.8
+# signoz/alertmanager:0.23.7
+# signoz/query-service:0.67.1
+# signoz/frontend:0.67.1
+# signoz/locust:1.2.3
+# signoz/signoz-schema-migrator:0.111.22
+# signoz/signoz-otel-collector:0.111.22
