@@ -16,10 +16,13 @@
 # bitnami/metallb-speaker:0.14.9-debian-12-r16
 
 # bitnami/cert-manager:1.5.0
-bitnami/acmesolver:1.17.2-debian-12-r1
-bitnami/cainjector:1.17.2-debian-12-r2
-bitnami/cert-manager:1.17.2-debian-12-r1
-bitnami/cert-manager-webhook:1.17.2-debian-12-r1
+# bitnami/acmesolver:1.17.2-debian-12-r1
+# bitnami/cainjector:1.17.2-debian-12-r2
+# bitnami/cert-manager:1.17.2-debian-12-r1
+# bitnami/cert-manager-webhook:1.17.2-debian-12-r1
+
+# bitnami/metrics-server:7.4.5
+bitnami/metrics-server:0.7.2-debian-12-r24
 
 # bitnamicharts/postgresql-ha:16.0.9
 # bitnami/os-shell:12-debian-12-r45
