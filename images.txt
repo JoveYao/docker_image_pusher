@@ -7,13 +7,19 @@
 # registry:2.8.3
 
 # longhorn/longhorn:1.9.0
-longhornio/longhorn-manager:v1.9.0
-longhornio/longhorn-share-manager:v1.9.0
-longhornio/longhorn-ui:v1.9.0
+# longhornio/longhorn-manager:v1.9.0
+# longhornio/longhorn-share-manager:v1.9.0
+# longhornio/longhorn-ui:v1.9.0
 
 # bitnami/metallb-ha:6.4.13
-bitnami/metallb-controller:0.14.9-debian-12-r16
-bitnami/metallb-speaker:0.14.9-debian-12-r16
+# bitnami/metallb-controller:0.14.9-debian-12-r16
+# bitnami/metallb-speaker:0.14.9-debian-12-r16
+
+# bitnami/cert-manager:1.5.0
+bitnami/acmesolver:1.17.2-debian-12-r1
+bitnami/cainjector:1.17.2-debian-12-r2
+bitnami/cert-manager:1.17.2-debian-12-r1
+bitnami/cert-manager-webhook:1.17.2-debian-12-r1
 
 # bitnamicharts/postgresql-ha:16.0.9
 # bitnami/os-shell:12-debian-12-r45
