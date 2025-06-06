@@ -21,8 +21,15 @@
 # bitnami/cert-manager:1.17.2-debian-12-r1
 # bitnami/cert-manager-webhook:1.17.2-debian-12-r1
 
+# bitnami/kube-prometheus:11.1.16
+bitnami/alertmanager:0.28.1-debian-12-r7
+bitnami/blackbox-exporter:0.26.0-debian-12-r8
+bitnami/prometheus:3.4.0-debian-12-r1
+bitnami/prometheus-operator:0.83.0-debian-12-r1
+bitnami/thanos:0.38.0-debian-12-r3
+
 # bitnami/metrics-server:7.4.5
-bitnami/metrics-server:0.7.2-debian-12-r24
+# bitnami/metrics-server:0.7.2-debian-12-r24
 
 # bitnamicharts/postgresql-ha:16.0.9
 # bitnami/os-shell:12-debian-12-r45
