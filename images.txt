@@ -7,20 +7,20 @@
 # registry:2.8.3
 
 # longhorn/longhorn:1.9.0
-longhornio/backing-image-manager:v1.9.0
-longhornio/longhorn-engine:v1.9.0
-longhornio/longhorn-instance-manager:v1.9.0
+# longhornio/backing-image-manager:v1.9.0
+# longhornio/longhorn-engine:v1.9.0
+# longhornio/longhorn-instance-manager:v1.9.0
 # longhornio/longhorn-manager:v1.9.0
 # longhornio/longhorn-share-manager:v1.9.0
 # longhornio/longhorn-ui:v1.9.0
-longhornio/longhorn-cli:v1.9.0
-longhornio/csi-attacher:v4.8.1
-longhornio/csi-provisioner:v5.2.0
-longhornio/csi-resizer:v1.13.2
-longhornio/csi-snapshotter:v8.2.0
-longhornio/csi-node-driver-registrar:v2.13.0
-longhornio/livenessprobe:v2.15.0
-longhornio/support-bundle-kit:v0.0.55
+# longhornio/longhorn-cli:v1.9.0
+# longhornio/csi-attacher:v4.8.1
+# longhornio/csi-provisioner:v5.2.0
+# longhornio/csi-resizer:v1.13.2
+longhornio/csi-snapshotter:v8.2.0 --platform=linux/amd64
+longhornio/csi-node-driver-registrar:v2.13.0 --platform=linux/amd64
+longhornio/livenessprobe:v2.15.0 --platform=linux/amd64
+# longhornio/support-bundle-kit:v0.0.55
 
 # bitnami/metallb-ha:6.4.13
 # bitnami/metallb-controller:0.14.9-debian-12-r16
