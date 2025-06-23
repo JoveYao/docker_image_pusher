@@ -38,8 +38,8 @@
 # bitnami/prometheus:3.4.0-debian-12-r1
 # bitnami/prometheus-operator:0.83.0-debian-12-r1
 # bitnami/thanos:0.38.0-debian-12-r3
-bitnami/kube-state-metrics:2.15.0-debian-12-r11
-bitnami/node-exporter:1.9.1-debian-12-r4
+# bitnami/kube-state-metrics:2.15.0-debian-12-r11
+# bitnami/node-exporter:1.9.1-debian-12-r4
 
 # bitnami/metrics-server:7.4.5
 # bitnami/metrics-server:0.7.2-debian-12-r24
@@ -78,11 +78,12 @@ bitnami/node-exporter:1.9.1-debian-12-r4
 # bitnamicharts/grafana-loki:4.8.12
 # bitnami/grafana-loki:3.5.1-debian-12-r0
 # bitnami/promtail:3.5.1-debian-12-r0
-bitnami/memcached:1.6.38-debian-12-r4
+# bitnami/memcached:1.6.38-debian-12-r4
 
 # bitnamicharts/grafana-mimir:2.0.7
 # bitnami/grafana-mimir:2.16.0-debian-12-r7
 # bitnami/memcached:1.6.38-debian-12-r6
+bitnami/os-shell:12-debian-12-r43
 
 # bitnamicharts/grafana-operator:4.9.18
 # bitnami/grafana-operator:5.18.0-debian-12-r1
