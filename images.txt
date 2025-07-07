@@ -5,14 +5,14 @@
 # *1.发行版选择：大多数镜像不指定默认都是bookworm. 最小选alpine;较小选slim(debian);安全选bookworm(=debian12或最新稳定版);稳定选bullseye(即debian11或次新稳定版)
 
 # registry:2.8.3
-bitnami/blackbox-exporter:0.27.0-debian-12-r0 
-bitnami/haproxy:3.2.2-debian-12-r0
-bitnami/consul:1.21.2-debian-12-r0
-bitnami/consul-exporter:0.13.0-debian-12-r25
-bitnami/etcd:3.6.1-debian-12-r2
-bitnami/grafana-alloy:1.9.2-debian-12-r0 
-bitnami/grafana-k6-operator:0.0.22-debian-12-r0
-bitnami/grafana-k6:1.1.0-debian-12-r0
+# bitnami/blackbox-exporter:0.27.0-debian-12-r0 
+# bitnami/haproxy:3.2.2-debian-12-r0
+# bitnami/consul:1.21.2-debian-12-r0
+# bitnami/consul-exporter:0.13.0-debian-12-r25
+# bitnami/etcd:3.6.1-debian-12-r2
+# bitnami/grafana-alloy:1.9.2-debian-12-r0 
+# bitnami/grafana-k6-operator:0.0.22-debian-12-r0
+# bitnami/grafana-k6:1.1.0-debian-12-r0
 
 # longhorn/longhorn:1.9.0
 # longhornio/backing-image-manager:v1.9.0
@@ -57,7 +57,7 @@ bitnami/grafana-k6:1.1.0-debian-12-r0
 # bitnami/pgpool:4.6.2-debian-12-r1
 # bitnami/postgres-exporter:0.17.1-debian-12-r8
 # bitnami/postgresql-repmgr:17.5.0-debian-12-r4
-bitnami/postgresql:17.5.0-debian-12-r16
+# bitnami/postgresql:17.5.0-debian-12-r16
 
 # bitnamicharts/redis:21.1.11
 # bitnami/os-shell:12-debian-12-r45
@@ -92,7 +92,7 @@ bitnami/postgresql:17.5.0-debian-12-r16
 # bitnamicharts/grafana-mimir:2.0.7
 # bitnami/grafana-mimir:2.16.0-debian-12-r7
 # bitnami/memcached:1.6.38-debian-12-r6
-bitnami/os-shell:12-debian-12-r43
+# bitnami/os-shell:12-debian-12-r43
 
 # bitnamicharts/grafana-operator:4.9.18
 # bitnami/grafana-operator:5.18.0-debian-12-r1
