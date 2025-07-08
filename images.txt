@@ -5,7 +5,6 @@
 # *1.发行版选择：大多数镜像不指定默认都是bookworm. 最小选alpine;较小选slim(debian);安全选bookworm(=debian12或最新稳定版);稳定选bullseye(即debian11或次新稳定版)
 
 # registry:2.8.3
-# bitnami/blackbox-exporter:0.27.0-debian-12-r0 
 # bitnami/haproxy:3.2.2-debian-12-r0
 # bitnami/consul:1.21.2-debian-12-r0
 # bitnami/consul-exporter:0.13.0-debian-12-r25
