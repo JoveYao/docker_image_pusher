@@ -5,9 +5,9 @@
 # *1.发行版选择：大多数镜像不指定默认都是bookworm. 最小选alpine;较小选slim(debian);安全选bookworm(=debian12或最新稳定版);稳定选bullseye(即debian11或次新稳定版)
 
 # registry:2.8.3
-busybox:1.37.0
-haproxy:3.2.3
-hashicorp/consul:1.21
+# busybox:1.37.0
+# haproxy:3.2.3
+# hashicorp/consul:1.21
 # bitnami/nginx-exporter:1.4.2-debian-12-r5
 # bitnami/blackbox-exporter:0.27.0-debian-12-r0
 # bitnami/haproxy:3.2.2-debian-12-r0
@@ -62,7 +62,7 @@ hashicorp/consul:1.21
 # bitnami/postgres-exporter:0.17.1-debian-12-r8
 # bitnami/postgresql-repmgr:17.5.0-debian-12-r4
 # bitnami/postgresql:17.5.0-debian-12-r16
-ongres/patroni:v4.0.4-pg17.2-build-6.39
+# ongres/patroni:v4.0.4-pg17.2-build-6.39
 
 # bitnamicharts/redis:21.1.11
 # bitnami/os-shell:12-debian-12-r45
@@ -115,7 +115,7 @@ ongres/patroni:v4.0.4-pg17.2-build-6.39
 # portainer/portainer-ce:2.25.1-alpine
 # portainer/portainer-ce:2.27.3-alpine
 
-nginx:1.29.0-bookworm-perl
+# nginx:1.29.0-bookworm-perl
 
 # redis:7.4.2-alpine
 # redis:7.4.2-bookworm
@@ -146,3 +146,12 @@ nginx:1.29.0-bookworm-perl
 # signoz/locust:1.2.3
 # signoz/signoz-schema-migrator:0.111.22
 # signoz/signoz-otel-collector:0.111.22
+
+rancher/rancher:v2.13.0
+rancher/rancher-webhook:v0.9.1
+rancher/fleet-agent:v0.14.0
+rancher/fleet:v0.14.0
+rancher/shell:v0.6.0
+rancher/kubectl:v1.34.1
+rancher/mirrored-pause:3.6
+rancher/mirrored-library-busybox:1.37.0
