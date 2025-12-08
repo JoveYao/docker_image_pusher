@@ -147,11 +147,21 @@
 # signoz/signoz-schema-migrator:0.111.22
 # signoz/signoz-otel-collector:0.111.22
 
-rancher/rancher:v2.13.0
-rancher/rancher-webhook:v0.9.1
-rancher/fleet-agent:v0.14.0
-rancher/fleet:v0.14.0
-rancher/shell:v0.6.0
-rancher/kubectl:v1.34.1
-rancher/mirrored-pause:3.6
-rancher/mirrored-library-busybox:1.37.0
+# --- Rancher ---
+# Rancher Server 核心
+# rancher/rancher:v2.13.0
+# rancher/shell:v0.6.0
+# rancher/kubectl:v1.34.1
+# rancher/rancher-webhook:v0.9.1
+# Fleet（多集群管理，Rancher 2.6+ 必需）
+# rancher/fleet:v0.14.0
+# rancher/fleet-agent:v0.14.0
+# 基础依赖
+# rancher/mirrored-pause:3.6
+# rancher/mirrored-library-busybox:1.37.0
+
+# jetstack/cert-manager
+quay.io/jetstack/cert-manager-cainjector:v1.19.1
+quay.io/jetstack/cert-manager-controller:v1.19.1
+quay.io/jetstack/cert-manager-startupapicheck:v1.19.1
+quay.io/jetstack/cert-manager-webhook:v1.19.1
