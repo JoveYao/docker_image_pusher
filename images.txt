@@ -187,8 +187,8 @@
 # quay.io/prometheus/node-exporter:v1.10.2
 # windows 需要安装 windows_exporter-0.31.3-amd64.msi
 # cadvisor 有望国内可直接拉取，0.53.0及以前在 gcr.io/cadvisor 之后在 ghcr.io/google
-# cadvisor 在 DockerHub 已不更新，可以使用 bitnami/cadvisor:0.56.2-debian-12-r0 代替
-bitnami/cadvisor:0.56.2-debian-12-r0
+# cadvisor 在 DockerHub 已不更新，可以使用 bitnami 镜像代替
+bitnami/cadvisor:0.55.1-debian-12-r1
 
 # [3] 服务
 # bitnami/harbor-exporter:2.14.2-debian-12-r1
