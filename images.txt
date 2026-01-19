@@ -169,18 +169,18 @@
 
 ### 网络治理2026（docker环境）
 # [1] 网络
-#traefik:v3.6.6
-bitnami/consul:1.22.2-debian-12-r2
+# traefik:v3.6.6
+bitnami/consul:1.22.2-debian-12-r1
 bitnami/consul-exporter:0.13.0-debian-12-r39
-#coredns/coredns:1.14.0
-smallstep/step-ca:v0.29.0
+# coredns/coredns:1.14.0
+smallstep/step-ca:0.29.0
 
 # [2] 可观测性
 otel/opentelemetry-collector-contrib:0.143.0 # contrib 版支持更多协议，可直接暴露端口观测
-quay.io/prometheus/prometheus:3.9.1 # bitnami有，k8s需要 bitnami/prometheus-operator
+quay.io/prometheus/prometheus:v3.9.1 # bitnami有，k8s需要 bitnami/prometheus-operator
 quay.io/prometheus/alertmanager:v0.30.1 # bitnami有
-grafana/promtail:3.5.1 # bitnami有但未验证，bitnami/promtail
-grafana/loki:3.5.5 # bitnami有但未验证，bitnami/grafana-loki
+grafana/promtail:3.6.3 # bitnami有但未验证，bitnami/promtail
+grafana/loki:3.6.3 # bitnami有但未验证，bitnami/grafana-loki
 grafana/tempo:2.9.0 # bitnami有但未验证，bitnami/grafana-tempo
 grafana/grafana:12.3.1 # bitnami有
 quay.io/prometheus/node-exporter:v1.10.2 # bitnami有
@@ -188,12 +188,12 @@ quay.io/prometheus/blackbox-exporter:v0.28.0 # bitnami有
 ghcr.io/google/cadvisor:v0.56.2 # bitnami有, 0.53.0及以前在 gcr.io/cadvisor 之后在 ghcr.io/google
 
 # [3] 服务
-bitnami/harbor-exporter:2.14.2-debian-12-r1 # bitnami有，需安装 harbor-offline-installer-v2.14.2.tgz
-#bitnami/redis:8.4.0-debian-12-r3
-oliver006/redis_exporter:1.80.1 # bitnami有
-#bitnami/rabbitmq:4.2.2-debian-12-r1  # 启用内置插件暴露指标，rabbitmq-plugins enable rabbitmq_prometheus
-#bitnami/postgresql:18.1.0-debian-12-r5 
+# bitnami/harbor-exporter:2.14.2-debian-12-r1 # goharbor好像也有，需安装 harbor-offline-installer-v2.14.2.tgz
+# bitnami/redis:8.4.0-debian-12-r3
+oliver006/redis_exporter:v1.80.1-alpine # bitnami有
+# bitnami/rabbitmq:4.2.2-debian-12-r1  # 启用内置插件暴露指标，rabbitmq-plugins enable rabbitmq_prometheus
+# bitnami/postgresql:18.1.0-debian-12-r5 
 quay.io/prometheuscommunity/postgres-exporter:v0.18.1 # bitnami有
-#timescale/timescaledb-ha:pg17.4-ts2.19.0
-#mcr.microsoft.com/mssql/server:2022-CU22-GDR1-ubuntu-22.04 # 无需拉取到私仓，国内可直接拉取
+# timescale/timescaledb-ha:pg17.4-ts2.19.0
+# mcr.microsoft.com/mssql/server:2022-CU22-GDR1-ubuntu-22.04 # 无需拉取到私仓，国内可直接拉取
 awaragi/prometheus-mssql-exporter:v1.3.0
