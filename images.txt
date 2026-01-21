@@ -169,7 +169,7 @@
 
 ### 网络治理2026（docker环境）
 # [1] 网络
-gliderlabs/registrator:v7
+alpine:3.23.2
 # traefik:v3.6.6
 # hashicorp/consul:1.22.2
 # quay.io/prometheus/consul-exporter:v0.13.0
@@ -200,4 +200,4 @@ gliderlabs/registrator:v7
 # quay.io/prometheuscommunity/postgres-exporter:v0.18.1
 # timescale/timescaledb-ha:pg17.4-ts2.19.0
 # mcr.microsoft.com/mssql/server:2022-CU22-GDR1-ubuntu-22.04
-awaragi/prometheus-mssql-exporter:v1.3.0
+# awaragi/prometheus-mssql-exporter:v1.3.0
