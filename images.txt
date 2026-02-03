@@ -195,9 +195,9 @@
 # bitnami/redis:8.4.0-debian-12-r4
 # bitnami/rabbitmq:4.2.3-debian-12-r1
 # bitnami/postgresql:18.1.0-debian-12-r8
-redis:8.4.0-alpine3.22
-rabbitmq:4.2.3-management-alpine
-postgres:18.1-alpine3.23
+redis:8.4.0-bookworm
+rabbitmq:4.2.3-management
+postgres:18.1-bookworm
 # timescale/timescaledb-ha:pg17.4-ts2.19.0
 # mcr.microsoft.com/mssql/server:2022-CU22-GDR1-ubuntu-22.04
 # bitnami/harbor-exporter:2.14.2-debian-12-r1
