@@ -193,10 +193,10 @@
 
 # [3] 服务
 # bitnami/harbor-exporter:2.14.2-debian-12-r1
-bitnami/redis:8.4.1-debian-12-r0
+bitnami/redis:8.4-debian-12
 # oliver006/redis_exporter:v1.80.1-alpine
-bitnami/rabbitmq:4.2.3-debian-12-r1
-bitnami/postgresql:18.1.0-debian-12-r8
+bitnami/rabbitmq:4.2-debian-12
+bitnami/postgresql:18.1-debian-12
 # quay.io/prometheuscommunity/postgres-exporter:v0.18.1
 # timescale/timescaledb-ha:pg17.4-ts2.19.0
 # mcr.microsoft.com/mssql/server:2022-CU22-GDR1-ubuntu-22.04
