@@ -181,7 +181,7 @@
 # grafana/promtail:3.6.3
 # grafana/loki:3.6.3
 # grafana/tempo:2.9.0
-# otel/opentelemetry-collector-contrib:0.143.0
+otel/opentelemetry-collector-contrib:0.145.0
 # quay.io/prometheus/prometheus:v3.9.1
 # quay.io/prometheus/alertmanager:v0.30.1
 # quay.io/prometheus/blackbox-exporter:v0.28.0
@@ -195,9 +195,9 @@
 # bitnami/redis:8.4.0-debian-12-r4
 # bitnami/rabbitmq:4.2.3-debian-12-r1
 # bitnami/postgresql:18.1.0-debian-12-r8
-redis:8.4.0-bookworm
-rabbitmq:4.2.3-management
-postgres:18.1-bookworm
+# redis:8.4.0-bookworm
+# rabbitmq:4.2.3-management
+# postgres:18.1-bookworm
 # timescale/timescaledb-ha:pg17.4-ts2.19.0
 # mcr.microsoft.com/mssql/server:2022-CU22-GDR1-ubuntu-22.04
 # bitnami/harbor-exporter:2.14.2-debian-12-r1
