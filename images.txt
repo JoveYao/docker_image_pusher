@@ -181,7 +181,8 @@
 # grafana/promtail:3.6.3
 # grafana/loki:3.6.3
 # grafana/tempo:2.9.0
-otel/opentelemetry-collector-contrib:0.145.0
+grafana/alloy:1.13.2
+# otel/opentelemetry-collector-contrib:0.145.0
 # quay.io/prometheus/prometheus:v3.9.1
 # quay.io/prometheus/alertmanager:v0.30.1
 # quay.io/prometheus/blackbox-exporter:v0.28.0
