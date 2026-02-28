@@ -177,11 +177,12 @@
 # smallstep/step-ca:0.29.0
 
 # [2] 可观测性
+openobserve/openobserve:v0.60.2
 # grafana/grafana:12.3.1
 # grafana/promtail:3.6.3
 # grafana/loki:3.6.3
 # grafana/tempo:2.9.0
-grafana/alloy:v1.13.2
+# grafana/alloy:v1.13.2
 # otel/opentelemetry-collector-contrib:0.145.0
 # quay.io/prometheus/prometheus:v3.9.1
 # quay.io/prometheus/alertmanager:v0.30.1
