@@ -177,7 +177,7 @@
 # smallstep/step-ca:0.29.0
 
 # [2] 可观测性
-openobserve/openobserve:v0.60.2
+# openobserve/openobserve:v0.60.2
 # grafana/grafana:12.3.1
 # grafana/promtail:3.6.3
 # grafana/loki:3.6.3
@@ -206,3 +206,5 @@ openobserve/openobserve:v0.60.2
 # oliver006/redis_exporter:v1.80.1-alpine
 # quay.io/prometheuscommunity/postgres-exporter:v0.18.1
 # awaragi/prometheus-mssql-exporter:v1.3.0
+
+red5d/docker-autocompose:latest
