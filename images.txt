@@ -166,6 +166,11 @@
 # quay.io/jetstack/cert-manager-acmesolver:v1.19.1
 # quay.io/jetstack/cert-manager-webhook:v1.19.1
 # quay.io/jetstack/cert-manager-startupapicheck:v1.19.1
+quay.io/jetstack/cert-manager-controller:v1.20.0
+quay.io/jetstack/cert-manager-cainjector:v1.20.0
+quay.io/jetstack/cert-manager-acmesolver:v1.20.0
+quay.io/jetstack/cert-manager-webhook:v1.20.0
+# ghcr.io/devmachine-fr/cert-manager-alidns-webhook/cert-manager-alidns-webhook:0.3.1
 
 ### 网络治理2026（docker环境）
 # [1] 网络
@@ -208,4 +213,3 @@
 # awaragi/prometheus-mssql-exporter:v1.3.0
 
 # red5d/docker-autocompose:latest
-ghcr.io/devmachine-fr/cert-manager-alidns-webhook/cert-manager-alidns-webhook:0.3.1
