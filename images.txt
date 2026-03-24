@@ -19,20 +19,20 @@
 # bitnami/grafana-k6:1.1.0-debian-12-r0
 
 # longhorn/longhorn v1.10.2 的所有离线镜像
-longhornio/backing-image-manager:v1.10.2
-longhornio/longhorn-engine:v1.10.2
-longhornio/longhorn-instance-manager:v1.10.2
-longhornio/longhorn-manager:v1.10.2
-longhornio/longhorn-share-manager:v1.10.2
-longhornio/longhorn-ui:v1.10.2
-longhornio/longhorn-cli:v1.10.2
-longhornio/csi-attacher:v4.10.0-20251226
-longhornio/csi-provisioner:v5.3.0-20251226
-longhornio/csi-resizer:v1.14.0-20260119
-longhornio/csi-snapshotter:v8.4.0-20251226
-longhornio/csi-node-driver-registrar:v2.15.0-20251226
-longhornio/livenessprobe:v2.17.0-20251226
-longhornio/support-bundle-kit:v0.0.79
+# longhornio/backing-image-manager:v1.10.2
+# longhornio/longhorn-engine:v1.10.2
+# longhornio/longhorn-instance-manager:v1.10.2
+# longhornio/longhorn-manager:v1.10.2
+# longhornio/longhorn-share-manager:v1.10.2
+# longhornio/longhorn-ui:v1.10.2
+# longhornio/longhorn-cli:v1.10.2
+# longhornio/csi-attacher:v4.10.0-20251226
+# longhornio/csi-provisioner:v5.3.0-20251226
+# longhornio/csi-resizer:v1.14.0-20260119
+# longhornio/csi-snapshotter:v8.4.0-20251226
+# longhornio/csi-node-driver-registrar:v2.15.0-20251226
+# longhornio/livenessprobe:v2.17.0-20251226
+# longhornio/support-bundle-kit:v0.0.79
 
 # bitnami/metallb-ha:6.4.13
 # bitnami/metallb-controller:0.14.9-debian-12-r16
@@ -208,4 +208,4 @@ longhornio/support-bundle-kit:v0.0.79
 # awaragi/prometheus-mssql-exporter:v1.3.0
 
 # red5d/docker-autocompose:latest
-wjiec/alidns-webhook:latest
+ghcr.io/devmachine-fr/cert-manager-alidns-webhook/cert-manager-alidns-webhook:0.3.1
