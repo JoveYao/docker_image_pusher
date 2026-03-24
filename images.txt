@@ -207,4 +207,5 @@ longhornio/support-bundle-kit:v0.0.79
 # quay.io/prometheuscommunity/postgres-exporter:v0.18.1
 # awaragi/prometheus-mssql-exporter:v1.3.0
 
-red5d/docker-autocompose:latest
+# red5d/docker-autocompose:latest
+pragkent/alidns-webhook:0.1.1
