@@ -117,8 +117,11 @@
 
 # nginx:1.29.0-bookworm-perl
 
-# redis:7.4.2-alpine
 # redis:7.4.2-bookworm
+redis:7.4.8-bookworm
+redis:8.6.1-trixie
+
+mysql:8.4.8-oracle
 
 # postgres:17.2-alpine
 # postgres:17.4-bookworm
@@ -166,13 +169,13 @@
 # quay.io/jetstack/cert-manager-acmesolver:v1.19.1
 # quay.io/jetstack/cert-manager-webhook:v1.19.1
 # quay.io/jetstack/cert-manager-startupapicheck:v1.19.1
-quay.io/jetstack/cert-manager-controller:v1.20.0
-quay.io/jetstack/cert-manager-cainjector:v1.20.0
-quay.io/jetstack/cert-manager-acmesolver:v1.20.0
-quay.io/jetstack/cert-manager-webhook:v1.20.0
+# quay.io/jetstack/cert-manager-controller:v1.20.0
+# quay.io/jetstack/cert-manager-cainjector:v1.20.0
+# quay.io/jetstack/cert-manager-acmesolver:v1.20.0
+# quay.io/jetstack/cert-manager-webhook:v1.20.0
 # ghcr.io/devmachine-fr/cert-manager-alidns-webhook/cert-manager-alidns-webhook:0.3.1
 
-### 网络治理2026（docker环境）
+# --- 网络治理2026（docker环境）---
 # [1] 网络
 # alpine:3.23.2
 # traefik:v3.6.6
