@@ -118,10 +118,10 @@
 # nginx:1.29.0-bookworm-perl
 
 # redis:7.4.2-bookworm
-redis:7.4.8-bookworm
-redis:8.6.1-trixie
+# redis:7.4.8-bookworm
+# redis:8.6.1-trixie
 
-mysql:8.4.8-oracle
+# mysql:8.4.8-oracle
 
 # postgres:17.2-alpine
 # postgres:17.4-bookworm
@@ -155,6 +155,7 @@ mysql:8.4.8-oracle
 # rancher/rancher:v2.13.0
 # rancher/shell:v0.6.0
 # rancher/kubectl:v1.34.1
+rancher/kubectl:v1.34.4
 # rancher/rancher-webhook:v0.9.1
 # Fleet（多集群管理，Rancher 2.6+ 必需）
 # rancher/fleet:v0.14.0
