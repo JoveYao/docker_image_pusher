@@ -7,6 +7,8 @@
 # registry:2.8.3
 # busybox:1.37.0
 # haproxy:3.2.3
+ghcr.io/aquasecurity/trivy:v0.69.3
+
 # hashicorp/consul:1.21
 # bitnami/nginx-exporter:1.4.2-debian-12-r5
 # bitnami/blackbox-exporter:0.27.0-debian-12-r0
@@ -155,7 +157,7 @@
 # rancher/rancher:v2.13.0
 # rancher/shell:v0.6.0
 # rancher/kubectl:v1.34.1
-rancher/kubectl:v1.34.4
+# rancher/kubectl:v1.34.4
 # rancher/rancher-webhook:v0.9.1
 # Fleet（多集群管理，Rancher 2.6+ 必需）
 # rancher/fleet:v0.14.0
