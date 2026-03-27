@@ -7,7 +7,7 @@
 # registry:2.8.3
 # busybox:1.37.0
 # haproxy:3.2.3
-ghcr.io/aquasecurity/trivy:v0.69.3
+ghcr.io/aquasecurity/trivy:0.69.3
 
 # hashicorp/consul:1.21
 # bitnami/nginx-exporter:1.4.2-debian-12-r5
