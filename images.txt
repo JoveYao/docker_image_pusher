@@ -242,12 +242,15 @@
 # quay.io/opstree/redis-operator:v0.24.0
 # quay.io/opstree/redis:v8.6.2
 # quay.io/opstree/redis-sentinel:v8.6.2
-quay.io/opstree/redis-exporter:v1.82.0
-rabbitmqoperator/cluster-operator:2.20.0
+# quay.io/opstree/redis-exporter:v1.82.0
+
+rabbitmqoperator/cluster-operator:v2.20.0
 rabbitmq:4.2.5-management
+
 ghcr.io/cloudnative-pg/cloudnative-pg:v1.29.0
 timescale/timescaledb:2.26.1-pg18
-percona/percona-server-mysql-operator:1.0.0
+
+percona/percona-server-mysql-operator:v1.0.0
 percona/percona-server:8.4.7
 percona/percona-orchestrator:3.2.6-19
 percona/mysql-router:8.4.7
