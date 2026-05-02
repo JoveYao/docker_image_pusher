@@ -260,8 +260,10 @@
 # percona/percona-xtrabackup:8.4.0-4.1
 # percona/percona-toolkit:3.7.0-2
 
-chrislusf/seaweedfs:4.19
-chrislusf/seaweedfs-operator:1.0.11
-curlimages/curl:8.8.0
-registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20231011-8b53cabe0
+# chrislusf/seaweedfs:4.19
+# chrislusf/seaweedfs-operator:1.0.11
+# curlimages/curl:8.8.0
+# registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20231011-8b53cabe0
+
+traccar/traccar:6.12.2-debian
 
