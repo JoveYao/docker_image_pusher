@@ -265,5 +265,5 @@
 # curlimages/curl:8.8.0
 # registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20231011-8b53cabe0
 
-traccar/traccar:6.12.2-debian
-
+# traccar/traccar:6.12.2-debian
+traccar/traccar:6.13.3-debian
