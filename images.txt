@@ -1,13 +1,13 @@
-##1.支持注释. 使用#
-##2.支持私库. k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
-##3.支持别名. --alias=xxxxx 参数指定镜像别名
-##4.支持镜像架构. --platform=xxxxx 参数指定镜像架构
-##*1.发行版选择：大多数镜像不指定默认都是bookworm. 最小选alpine;较小选slim(debian);安全选bookworm(=debian12或最新稳定版);稳定选bullseye(即debian11或次新稳定版)
+#-1.支持注释. 使用#
+#-2.支持私库. k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
+#-3.支持别名. --alias=xxxxx 参数指定镜像别名
+#-4.支持镜像架构. --platform=xxxxx 参数指定镜像架构
+#-*1.发行版选择：大多数镜像不指定默认都是bookworm. 最小选alpine;较小选slim(debian);安全选bookworm(=debian12或最新稳定版);稳定选bullseye(即debian11或次新稳定版)
 
 #####-----K3S-----#####
 #-----Cert-Manager-----#
-#https://github.com/cert-manager/cert-manager/releases, 必须的文件 `cert-manager.crds.yaml` `cert-manager.yaml`, 从中获取版本号;
-#https://github.com/DEVmachine-fr/cert-manager-alidns-webhook/blob/master/charts/alidns-webhook/values.yaml, cert-manager-alidns-webhook已经有一段时间没更新了, 一般无需升级.
+#-https://github.com/cert-manager/cert-manager/releases, 必须的文件 `cert-manager.crds.yaml` `cert-manager.yaml`, 从中获取版本号;
+#-https://github.com/DEVmachine-fr/cert-manager-alidns-webhook/blob/master/charts/alidns-webhook/values.yaml, cert-manager-alidns-webhook已经有一段时间没更新了, 一般无需升级.
 quay.io/jetstack/cert-manager-controller:v1.20.3
 quay.io/jetstack/cert-manager-cainjector:v1.20.3
 quay.io/jetstack/cert-manager-acmesolver:v1.20.3
@@ -15,59 +15,59 @@ quay.io/jetstack/cert-manager-webhook:v1.20.3
 ghcr.io/devmachine-fr/cert-manager-alidns-webhook/cert-manager-alidns-webhook:0.3.1
 
 #-----Longhorn-----#
-#https://github.com/longhorn/longhorn/releases,  longhorn.yaml → 部署 YAML（含所有 CRD 和控制器）, longhorn-images.txt → 部署镜像列表,需要拉到阿里云再下载下来;
-longhornio/backing-image-manager:v1.11.3
-longhornio/longhorn-engine:v1.11.3
-longhornio/longhorn-instance-manager:v1.11.3
-longhornio/longhorn-manager:v1.11.3
-longhornio/longhorn-share-manager:v1.11.3
-longhornio/longhorn-ui:v1.11.3
-longhornio/longhorn-cli:v1.11.3
-longhornio/csi-attacher:v4.12.0
-longhornio/csi-provisioner:v6.3.0
-longhornio/csi-resizer:v2.2.0
-longhornio/csi-snapshotter:v8.6.0
-longhornio/csi-node-driver-registrar:v2.17.0
-longhornio/livenessprobe:v2.19.0
-longhornio/support-bundle-kit:v0.0.88
+#-https://github.com/longhorn/longhorn/releases,  longhorn.yaml → 部署 YAML（含所有 CRD 和控制器）, longhorn-images.txt → 部署镜像列表,需要拉到阿里云再下载下来;
+#longhornio/backing-image-manager:v1.11.3
+#longhornio/longhorn-engine:v1.11.3
+#longhornio/longhorn-instance-manager:v1.11.3
+#longhornio/longhorn-manager:v1.11.3
+#longhornio/longhorn-share-manager:v1.11.3
+#longhornio/longhorn-ui:v1.11.3
+#longhornio/longhorn-cli:v1.11.3
+#longhornio/csi-attacher:v4.12.0
+#longhornio/csi-provisioner:v6.3.0
+#longhornio/csi-resizer:v2.2.0
+#longhornio/csi-snapshotter:v8.6.0
+#longhornio/csi-node-driver-registrar:v2.17.0
+#longhornio/livenessprobe:v2.19.0
+#longhornio/support-bundle-kit:v0.0.88
 
 #-----Redis-----#
-#https://github.com/OT-CONTAINER-KIT/redis-operator/releases
-#https://github.com/OT-CONTAINER-KIT/helm-charts/releases → redis-operator-XXX.tgz → crds.yaml 重命名为 redis-operator-crds.yaml
-#https://github.com/redis/redis/releases
-#https://github.com/oliver006/redis_exporter
+#-https://github.com/OT-CONTAINER-KIT/redis-operator/releases
+#-https://github.com/OT-CONTAINER-KIT/helm-charts/releases → redis-operator-XXX.tgz → crds.yaml 重命名为 redis-operator-crds.yaml
+#-https://github.com/redis/redis/releases
+#-https://github.com/oliver006/redis_exporter
 quay.io/opstree/redis-operator:v0.25.0
-quay.io/opstree/redis:v8.6.4
-quay.io/opstree/redis-sentinel:v8.6.4
-quay.io/opstree/redis-exporter:v1.86.0
+quay.io/opstree/redis:v8.6.1
+quay.io/opstree/redis-sentinel:v8.6.1
+quay.io/opstree/redis-exporter:v1.84.0
 
 #-----RabbitMQ-----#
-#https://github.com/rabbitmq/cluster-operator/releases → cluster-operator-quay-io.yml
-#cluster-operator.yml 和 cluster-operator-ghcr-io.yml 下载 ghcr.io/rabbitmq/cluster-operator:xxx 镜像
-#cluster-operator-quay-io.yml 下载 gquay.io/rabbitmqoperator/cluster-operator:xxx 镜像
+#-https://github.com/rabbitmq/cluster-operator/releases → cluster-operator-quay-io.yml
+#-cluster-operator.yml 和 cluster-operator-ghcr-io.yml 下载 ghcr.io/rabbitmq/cluster-operator:xxx 镜像
+#-cluster-operator-quay-io.yml 下载 gquay.io/rabbitmqoperator/cluster-operator:xxx 镜像
 quay.io/rabbitmqoperator/cluster-operator:2.22.0
-#https://github.com/rabbitmq/rabbitmq-server/releases
+#-https://github.com/rabbitmq/rabbitmq-server/releases
 rabbitmq:4.2.8-management
 
 #-----PostgreSQL(结合TimescaleDB插件自行打包镜像)-----#
-#https://github.com/cloudnative-pg/cloudnative-pg/releases
-#https://github.com/docker-library/postgres
-#https://github.com/cloudnative-pg/postgres-containers/pkgs/container/postgresql/versions
-#https://github.com/timescale/timescaledb/releases
+#-https://github.com/cloudnative-pg/cloudnative-pg/releases
+#-https://github.com/docker-library/postgres
+#-https://github.com/cloudnative-pg/postgres-containers/pkgs/container/postgresql/versions
+#-https://github.com/timescale/timescaledb/releases
 ghcr.io/cloudnative-pg/cloudnative-pg:1.30.0
 ghcr.io/cloudnative-pg/postgresql:18.4-standard-trixie
 
 #-----MySQL-----#
-#从 percona-server-mysql-operator/v1.0.0/deploy/cr.yaml 获取
-#https://github.com/percona/percona-server-mysql-operator/releases
+#-从 percona-server-mysql-operator/v1.0.0/deploy/cr.yaml 获取
+#-https://github.com/percona/percona-server-mysql-operator/releases
 
 #-----SeaweedFS-----#
-#https://github.com/seaweedfs/seaweedfs/releases
+#-https://github.com/seaweedfs/seaweedfs/releases
 chrislusf/seaweedfs:4.37
-#https://github.com/seaweedfs/seaweedfs-operator/releases
-#chrislusf/seaweedfs-operator 见 Chart.yaml 中的 appVersion
-#[一般不变]curlimages/curl 见 values.yaml
-#[一般不变]ingress-nginx/kube-webhook-certgen 见 values.yaml
+#-https://github.com/seaweedfs/seaweedfs-operator/releases
+#-chrislusf/seaweedfs-operator 见 Chart.yaml 中的 appVersion
+#-[一般不变]curlimages/curl 见 values.yaml
+#-[一般不变]ingress-nginx/kube-webhook-certgen 见 values.yaml
 chrislusf/seaweedfs-operator:1.0.30
 curlimages/curl:8.8.0
 registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20231011-8b53cabe0
