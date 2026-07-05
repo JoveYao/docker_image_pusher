@@ -4,266 +4,73 @@
 ##4.支持镜像架构. --platform=xxxxx 参数指定镜像架构
 ##*1.发行版选择：大多数镜像不指定默认都是bookworm. 最小选alpine;较小选slim(debian);安全选bookworm(=debian12或最新稳定版);稳定选bullseye(即debian11或次新稳定版)
 
-# registry:2.8.3
-# busybox:1.37.0
-# haproxy:3.2.3
-# ghcr.io/aquasecurity/trivy:0.69.3
-# alpine/k8s:1.34.4
+#####-----K3S-----#####
+#-----Cert-Manager-----#
+#https://github.com/cert-manager/cert-manager/releases, 必须的文件 `cert-manager.crds.yaml` `cert-manager.yaml`, 从中获取版本号;
+#https://github.com/DEVmachine-fr/cert-manager-alidns-webhook/blob/master/charts/alidns-webhook/values.yaml, cert-manager-alidns-webhook已经有一段时间没更新了, 一般无需升级.
+quay.io/jetstack/cert-manager-controller:v1.20.3
+quay.io/jetstack/cert-manager-cainjector:v1.20.3
+quay.io/jetstack/cert-manager-acmesolver:v1.20.3
+quay.io/jetstack/cert-manager-webhook:v1.20.3
+ghcr.io/devmachine-fr/cert-manager-alidns-webhook/cert-manager-alidns-webhook:0.3.1
 
-# hashicorp/consul:1.21
-# bitnami/nginx-exporter:1.4.2-debian-12-r5
-# bitnami/blackbox-exporter:0.27.0-debian-12-r0
-# bitnami/haproxy:3.2.2-debian-12-r0
-# bitnami/consul:1.21.2-debian-12-r0
-# bitnami/consul-exporter:0.13.0-debian-12-r25
-# bitnami/etcd:3.6.1-debian-12-r2
-# bitnami/grafana-alloy:1.9.2-debian-12-r0 
-# bitnami/grafana-k6-operator:0.0.22-debian-12-r0
-# bitnami/grafana-k6:1.1.0-debian-12-r0
+#-----Longhorn-----#
+#https://github.com/longhorn/longhorn/releases,  longhorn.yaml → 部署 YAML（含所有 CRD 和控制器）, longhorn-images.txt → 部署镜像列表,需要拉到阿里云再下载下来;
+longhornio/backing-image-manager:v1.11.3
+longhornio/longhorn-engine:v1.11.3
+longhornio/longhorn-instance-manager:v1.11.3
+longhornio/longhorn-manager:v1.11.3
+longhornio/longhorn-share-manager:v1.11.3
+longhornio/longhorn-ui:v1.11.3
+longhornio/longhorn-cli:v1.11.3
+longhornio/csi-attacher:v4.12.0
+longhornio/csi-provisioner:v6.3.0
+longhornio/csi-resizer:v2.2.0
+longhornio/csi-snapshotter:v8.6.0
+longhornio/csi-node-driver-registrar:v2.17.0
+longhornio/livenessprobe:v2.19.0
+longhornio/support-bundle-kit:v0.0.88
 
-# longhorn/longhorn v1.10.2 (默认v1引擎) 的所有离线镜像
-# longhornio/backing-image-manager:v1.10.2
-# longhornio/longhorn-engine:v1.10.2
-# longhornio/longhorn-instance-manager:v1.10.2
-# longhornio/longhorn-manager:v1.10.2
-# longhornio/longhorn-share-manager:v1.10.2
-# longhornio/longhorn-ui:v1.10.2
-# longhornio/longhorn-cli:v1.10.2
-# longhornio/csi-attacher:v4.10.0-20251226
-# longhornio/csi-provisioner:v5.3.0-20251226
-# longhornio/csi-resizer:v1.14.0-20260119
-# longhornio/csi-snapshotter:v8.4.0-20251226
-# longhornio/csi-node-driver-registrar:v2.15.0-20251226
-# longhornio/livenessprobe:v2.17.0-20251226
-# longhornio/support-bundle-kit:v0.0.79
+#-----Redis-----#
+#https://github.com/OT-CONTAINER-KIT/redis-operator/releases
+#https://github.com/OT-CONTAINER-KIT/helm-charts/releases → redis-operator-XXX.tgz → crds.yaml 重命名为 redis-operator-crds.yaml
+#https://github.com/redis/redis/releases
+#https://github.com/oliver006/redis_exporter
+quay.io/opstree/redis-operator:v0.25.0
+quay.io/opstree/redis:v8.6.4
+quay.io/opstree/redis-sentinel:v8.6.4
+quay.io/opstree/redis-exporter:v1.86.0
 
-##longhorn/longhorn v1.11.1 (默认v2引擎) 的所有离线镜像
-# longhornio/backing-image-manager:v1.11.1
-# longhornio/longhorn-engine:v1.11.1
-# longhornio/longhorn-instance-manager:v1.11.1
-# longhornio/longhorn-manager:v1.11.1
-# longhornio/longhorn-share-manager:v1.11.1
-# longhornio/longhorn-ui:v1.11.1
-# longhornio/longhorn-cli:v1.11.1
-# longhornio/csi-attacher:v4.11.0
-# longhornio/csi-provisioner:v5.3.0-20260225
-# longhornio/csi-resizer:v2.1.0
-# longhornio/csi-snapshotter:v8.5.0
-# longhornio/csi-node-driver-registrar:v2.16.0
-# longhornio/livenessprobe:v2.18.0
-# longhornio/support-bundle-kit:v0.0.81
+#-----RabbitMQ-----#
+#https://github.com/rabbitmq/cluster-operator/releases → cluster-operator-quay-io.yml
+#cluster-operator.yml 和 cluster-operator-ghcr-io.yml 下载 ghcr.io/rabbitmq/cluster-operator:xxx 镜像
+#cluster-operator-quay-io.yml 下载 gquay.io/rabbitmqoperator/cluster-operator:xxx 镜像
+quay.io/rabbitmqoperator/cluster-operator:2.22.0
+#https://github.com/rabbitmq/rabbitmq-server/releases
+rabbitmq:4.2.8-management
 
-# bitnami/metallb-ha:6.4.13
-# bitnami/metallb-controller:0.14.9-debian-12-r16
-# bitnami/metallb-speaker:0.14.9-debian-12-r16
+#-----PostgreSQL(结合TimescaleDB插件自行打包镜像)-----#
+#https://github.com/cloudnative-pg/cloudnative-pg/releases
+#https://github.com/docker-library/postgres
+#https://github.com/cloudnative-pg/postgres-containers/pkgs/container/postgresql/versions
+#https://github.com/timescale/timescaledb/releases
+ghcr.io/cloudnative-pg/cloudnative-pg:1.30.0
+ghcr.io/cloudnative-pg/postgresql:18.4-standard-trixie
 
-# bitnami/cert-manager:1.5.0
-# bitnami/acmesolver:1.17.2-debian-12-r1
-# bitnami/cainjector:1.17.2-debian-12-r2
-# bitnami/cert-manager:1.17.2-debian-12-r1
-# bitnami/cert-manager-webhook:1.17.2-debian-12-r1
+#-----MySQL-----#
+#从 percona-server-mysql-operator/v1.0.0/deploy/cr.yaml 获取
+#https://github.com/percona/percona-server-mysql-operator/releases
 
-# bitnami/kube-prometheus:11.1.16
-# bitnami/alertmanager:0.28.1-debian-12-r7
-# bitnami/blackbox-exporter:0.26.0-debian-12-r8
-# bitnami/prometheus:3.4.0-debian-12-r1
-# bitnami/prometheus-operator:0.83.0-debian-12-r1
-# bitnami/thanos:0.38.0-debian-12-r3
-# bitnami/kube-state-metrics:2.15.0-debian-12-r11
-# bitnami/node-exporter:1.9.1-debian-12-r4
+#-----SeaweedFS-----#
+#https://github.com/seaweedfs/seaweedfs/releases
+chrislusf/seaweedfs:4.37
+#https://github.com/seaweedfs/seaweedfs-operator/releases
+#chrislusf/seaweedfs-operator 见 Chart.yaml 中的 appVersion
+#[一般不变]curlimages/curl 见 values.yaml
+#[一般不变]ingress-nginx/kube-webhook-certgen 见 values.yaml
+chrislusf/seaweedfs-operator:1.0.30
+curlimages/curl:8.8.0
+registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20231011-8b53cabe0
 
-# bitnami/metrics-server:7.4.5
-# bitnami/metrics-server:0.7.2-debian-12-r24
-
-# bitnamicharts/postgresql-ha:16.0.9
-# bitnami/os-shell:12-debian-12-r45
-# bitnami/pgpool:4.6.2-debian-12-r1
-# bitnami/postgres-exporter:0.17.1-debian-12-r8
-# bitnami/postgresql-repmgr:17.5.0-debian-12-r4
-# bitnami/postgresql:17.5.0-debian-12-r16
-# ongres/patroni:v4.0.4-pg17.2-build-6.39
-
-# bitnamicharts/redis:21.1.11
-# bitnami/os-shell:12-debian-12-r45
-# bitnami/kubectl:1.33.1-debian-12-r2
-# bitnamilegacy/kubectl:1.33
-# bitnami/redis:8.0.2-debian-12-r3
-# bitnami/redis-sentinel:8.0.2-debian-12-r1
-# bitnami/redis-exporter:1.73.0-debian-12-r0
-
-# bitnamicharts/rabbitmq:16.0.4
-# bitnami/os-shell:12-debian-12-r45
-# bitnami/rabbitmq:4.1.0-debian-12-r1
-
-# bitnamicharts/harbor:26.6.1
-# bitnami/os-shell:12-debian-12-r45
-# bitnami/nginx:1.28.0-debian-12-r3
-# bitnami/harbor-adapter-trivy:2.13.1-debian-12-r0
-# bitnami/harbor-core:2.13.1-debian-12-r1
-# bitnami/harbor-exporter:2.13.1-debian-12-r0
-# bitnami/harbor-jobservice:2.13.1-debian-12-r0
-# bitnami/harbor-portal:2.13.1-debian-12-r1
-# bitnami/harbor-registry:2.13.1-debian-12-r0
-# bitnami/harbor-registryctl:2.13.1-debian-12-r0
-
-# bitnamicharts/grafana:12.0.4
-# bitnami/grafana:12.0.1-debian-12-r1
-
-# bitnamicharts/grafana-loki:4.8.12
-# bitnami/grafana-loki:3.5.1-debian-12-r0
-# bitnami/promtail:3.5.1-debian-12-r0
-# bitnami/memcached:1.6.38-debian-12-r4
-
-# bitnamicharts/grafana-mimir:2.0.7
-# bitnami/grafana-mimir:2.16.0-debian-12-r7
-# bitnami/memcached:1.6.38-debian-12-r6
-# bitnami/os-shell:12-debian-12-r43
-
-# bitnamicharts/grafana-operator:4.9.18
-# bitnami/grafana-operator:5.18.0-debian-12-r1
-
-# bitnamicharts/grafana-tempo:4.0.6
-# bitnami/grafana-tempo:2.7.2-debian-12-r5
-# bitnami/grafana-tempo-query:2.7.2-debian-12-r7
-# bitnami/grafana-tempo-vulture:2.7.2-debian-12-r5
-
-# node:16.18.0-alpine3.16
-# node:20.2.0-alpine3.16
-# node:22.14.0-bullseye-slim
-# node:22.14.0-bookworm-slim
-
-# portainer/portainer-ce:2.25.1-alpine
-# portainer/portainer-ce:2.27.3-alpine
-
-# nginx:1.29.0-bookworm-perl
-
-# redis:7.4.2-bookworm
-# redis:7.4.8-bookworm
-# redis:8.6.1-trixie
-
-# mysql:8.4.8-oracle
-
-# postgres:17.2-alpine
-# postgres:17.4-bookworm
-
-# rabbitmq:4.0.2-management
-# rabbitmq:4.0.7-management
-# rabbitmq:4.0.8-management
-# rabbitmq:4.1.0-rc.1-management
-
-# timescale/timescaledb-ha:pg16.3-ts2.15.3-all
-# timescale/timescaledb-ha:pg17.4-ts2.19.0
-
-# qxip/qryn:3.2.37
-# qxip/qryn:3.2.37-bun
-# clickhouse/clickhouse-server:24.8.11.5-alpine
-# clickhouse/clickhouse-server:24.1.2-alpine
-# gliderlabs/logspout:v3.2.14
-# bitnami/zookeeper:3.7.1
-# jaegertracing/example-hotrod:1.65.0
-# jaegertracing/example-hotrod:1.30
-# signoz/alertmanager:0.23.8
-# signoz/alertmanager:0.23.7
-# signoz/query-service:0.67.1
-# signoz/frontend:0.67.1
-# signoz/locust:1.2.3
-# signoz/signoz-schema-migrator:0.111.22
-# signoz/signoz-otel-collector:0.111.22
-
-##--- Rancher ---
-# Rancher Server 核心
-# rancher/rancher:v2.13.0
-# rancher/shell:v0.6.0
-# rancher/kubectl:v1.34.1
-# rancher/kubectl:v1.34.4
-# rancher/rancher-webhook:v0.9.1
-# Fleet（多集群管理，Rancher 2.6+ 必需）
-# rancher/fleet:v0.14.0
-# rancher/fleet-agent:v0.14.0
-##基础依赖
-# rancher/mirrored-pause:3.6
-# rancher/mirrored-library-busybox:1.37.0
-
-# jetstack/cert-manager
-# quay.io/jetstack/cert-manager-cainjector:v1.19.1
-# quay.io/jetstack/cert-manager-controller:v1.19.1
-# quay.io/jetstack/cert-manager-acmesolver:v1.19.1
-# quay.io/jetstack/cert-manager-webhook:v1.19.1
-# quay.io/jetstack/cert-manager-startupapicheck:v1.19.1
-# quay.io/jetstack/cert-manager-controller:v1.20.0
-# quay.io/jetstack/cert-manager-cainjector:v1.20.0
-# quay.io/jetstack/cert-manager-acmesolver:v1.20.0
-# quay.io/jetstack/cert-manager-webhook:v1.20.0
-# ghcr.io/devmachine-fr/cert-manager-alidns-webhook/cert-manager-alidns-webhook:0.3.1
-
-##--- 网络治理2026（docker环境）---
-##[1] 网络
-# alpine:3.23.2
-# traefik:v3.6.6
-# hashicorp/consul:1.22.2
-# quay.io/prometheus/consul-exporter:v0.13.0
-# coredns/coredns:1.14.0
-# smallstep/step-ca:0.29.0
-
-##[2] 可观测性
-# openobserve/openobserve:v0.60.2
-# grafana/grafana:12.3.1
-# grafana/promtail:3.6.3
-# grafana/loki:3.6.3
-# grafana/tempo:2.9.0
-# grafana/alloy:v1.13.2
-# otel/opentelemetry-collector-contrib:0.145.0
-# quay.io/prometheus/prometheus:v3.9.1
-# quay.io/prometheus/alertmanager:v0.30.1
-# quay.io/prometheus/blackbox-exporter:v0.28.0
-# quay.io/prometheus/node-exporter:v1.10.2
-##windows 需要安装 windows_exporter-0.31.3-amd64.msi
-# cadvisor 有望国内可直接拉取，0.53.0 及以前在 gcr.io/cadvisor 之后在 ghcr.io/google
-# dockerhub 已停更，转到如 ghcr.io/google/cadvisor:v0.56.2，bitnami 好像有但也拉取不了
-# bitnami/cadvisor:0.56.2-debian-12-r0
-
-##[3] 服务
-# bitnami/redis:8.4.0-debian-12-r4
-# bitnami/rabbitmq:4.2.3-debian-12-r1
-# bitnami/postgresql:18.1.0-debian-12-r8
-# redis:8.4.0-bookworm
-# rabbitmq:4.2.3-management
-# postgres:18.1-bookworm
-# timescale/timescaledb-ha:pg17.4-ts2.19.0
-# mcr.microsoft.com/mssql/server:2022-CU22-GDR1-ubuntu-22.04
-# bitnami/harbor-exporter:2.14.2-debian-12-r1
-# oliver006/redis_exporter:v1.80.1-alpine
-# quay.io/prometheuscommunity/postgres-exporter:v0.18.1
-# awaragi/prometheus-mssql-exporter:v1.3.0
-
-# red5d/docker-autocompose:latest
-
-# # operator 之 redis/rabbitmq/postgresql+timescaledb/mysql
-# quay.io/opstree/redis-operator:v0.24.0
-# quay.io/opstree/redis:v8.6.2
-# quay.io/opstree/redis-sentinel:v8.6.2
-# quay.io/opstree/redis-exporter:v1.82.0
-
-# quay.io/rabbitmqoperator/cluster-operator:2.20.0
-# rabbitmq:4.2.5-management
-
-# ghcr.io/cloudnative-pg/cloudnative-pg:1.29.0
-# ghcr.io/cloudnative-pg/postgresql:18.3-standard-trixie
-# timescale/timescaledb:2.26.1-pg18
-
-# percona/percona-server-mysql-operator:1.0.0
-# percona/percona-server:8.4.6-6.1
-# percona/haproxy:2.8.15
-# percona/percona-mysql-router:8.4.6
-# percona/percona-orchestrator:3.2.6-18
-# percona/pmm-client:3.4.1
-# percona/percona-xtrabackup:8.4.0-4.1
-# percona/percona-toolkit:3.7.0-2
-
-# chrislusf/seaweedfs:4.19
-# chrislusf/seaweedfs-operator:1.0.11
-# curlimages/curl:8.8.0
-# registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20231011-8b53cabe0
-
-# traccar/traccar:6.12.2-debian
-traccar/traccar:6.13.3-debian
+#-----Traccar-----#
+traccar/traccar:6.14.5-debian
