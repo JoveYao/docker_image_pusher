@@ -12,17 +12,21 @@
 #quay.io/jetstack/cert-manager-cainjector:v1.20.3
 #quay.io/jetstack/cert-manager-acmesolver:v1.20.3
 #quay.io/jetstack/cert-manager-webhook:v1.20.3
+#-用于cert-manager与alidns之间通信的webhook实现
 #ghcr.io/devmachine-fr/cert-manager-alidns-webhook/cert-manager-alidns-webhook:0.3.1
+#-用于同步证书和k3s一个版本即可
+alpine/k8s:1.35.6
+
 
 #-----Rancher-----#
 #-https://github.com/rancher/rancher/releases 下载所需版本的 rancher-images.txt 找出下列镜像对应版本
-rancher/rancher:v2.14.3
-rancher/fleet:v0.15.4
-rancher/fleet-agent:v0.15.4
-rancher/shell:v0.7.1
-rancher/rancher-webhook:v0.10.7
-rancher/system-upgrade-controller:v0.19.1
-rancher/turtles:v0.26.3
+#rancher/rancher:v2.14.3
+#rancher/fleet:v0.15.4
+#rancher/fleet-agent:v0.15.4
+#rancher/shell:v0.7.1
+#rancher/rancher-webhook:v0.10.7
+#rancher/system-upgrade-controller:v0.19.1
+#rancher/turtles:v0.26.3
 
 #-----Longhorn-----#
 #-https://github.com/longhorn/longhorn/releases,  longhorn.yaml → 部署 YAML（含所有 CRD 和控制器）, longhorn-images.txt → 部署镜像列表,需要拉到阿里云再下载下来;
